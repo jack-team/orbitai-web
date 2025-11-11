@@ -1,6 +1,43 @@
 @import '@/styles/variables.scss';
 
 $inner-width: 650px;
+$ani-delay: .85s;
+
+@keyframes RightIn {
+  from {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes RightCenterIn {
+  from {
+    opacity: 0;
+    transform: translate3d(100px, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@keyframes LeftIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 .banner_wrapper {
   width: 100%;
@@ -12,15 +49,19 @@ $inner-width: 650px;
   &::before {
     content: "";
     z-index: 0;
+    opacity: 0;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background-image: url(/images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+    background-image: url(/images/banner-bg.jpg);
+    animation: RightIn $ani-delay $ani-func .5s forwards;
   }
 }
 
@@ -39,10 +80,12 @@ $inner-width: 650px;
   display: flex;
   align-items: center;
 
-
   .content_inner {
     height: 662px;
     width: $inner-width;
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+    animation: LeftIn $ani-delay $ani-func .5s forwards;
   }
 
   .title {
@@ -54,6 +97,10 @@ $inner-width: 650px;
     p {
       margin: 0;
       line-height: 1.5;
+    }
+
+    .l_text {
+      color: var(--link-color);
     }
   }
 
@@ -83,8 +130,10 @@ $inner-width: 650px;
   top: 50%;
   z-index: 2;
   overflow: hidden;
-  transform: translateY(-50%);
   width: calc(50vw - 70px);
+  opacity: 0;
+  transform: translate3d(100px, -50%, 0);
+  animation: RightCenterIn $ani-delay $ani-func .5s forwards;
 
   .display1,
   .display2 {

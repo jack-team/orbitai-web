@@ -1,0 +1,22 @@
+.container {
+  background: #fff;
+  padding: 140px 0;
+}
+
+.content {
+  margin: auto;
+  width: var(--content-width);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--theme-color);
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.tab {
+  height: 570px;
+}

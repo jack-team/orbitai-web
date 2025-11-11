@@ -3,12 +3,16 @@
 $content-width: 1232px;
 $header-height: 90px;
 $theme-color: #0A2540;
+$link-color: #00D4FF;
+$ani-func: cubic-bezier(.25, .1, .25, 1);
 
 // 全局 css 变量在这里加入
 $root-variables: (
   (key: 'content-width', val: $content-width),
   (key: 'header-height', val: $header-height),
   (key: 'theme-color', val: $theme-color),
+  (key: 'link-color', val: $link-color),
+  (key: 'ani-func', val: $ani-func),
 );
 
 :root {

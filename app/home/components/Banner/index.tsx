@@ -1,16 +1,17 @@
 import type { FC } from 'react';
+import classNames from 'classnames';
 import styles from './styles.module.scss';
 
 const Banner: FC = () => {
   return (
-    <div className={styles.banner_wrapper}>
+    <div className={classNames(styles.banner_wrapper)}>
       <div className={styles.banner_container}>
         <div className={styles.banner_content}>
           <div className={styles.content_inner}>
             <div className={styles.title}>
               <p>Transforming Global</p>
               <p>Operations Through</p>
-              <p>Intelligent Automation</p>
+              <p className={styles.l_text}>Intelligent Automation</p>
             </div>
             <div className={styles.sub_title}>
               Simplify your workflows and automate your tasks with our cutting-edge Al solutions tailored for supply chain and logistics
