@@ -1,0 +1,31 @@
+.container {
+  background: #F6F9FC;
+  padding: 100px 0 120px 0;
+}
+
+.content {
+  margin: auto;
+  width: var(--content-width);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--theme-color);
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.desc {
+  font-size: 24px;
+  color: #4B4B4B;
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.cards {
+  display: flex;
+  gap: 80px;
+}

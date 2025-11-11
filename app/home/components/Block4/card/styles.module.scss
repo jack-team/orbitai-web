@@ -1,0 +1,53 @@
+.container {
+  padding: 70px 56px 80px 56px;
+  background: #fff;
+  position: relative;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  box-shadow: 0px 8px 20px 4px #0000000F;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 9px;
+    background: linear-gradient(90deg, #FAAF00 0%,
+        #FD9600 8.9%, #FF740A 20.25%,
+        #FF5E79 36.25%, #A45AD3 46.75%,
+        #7F5BEC 54.25%, #605EFF 59%,
+        #03BAF5 74.45%, #437CFC 88.7%,
+        #5A65FE 92.8%, #915BE0 100%);
+  }
+
+  .domian {
+    font-size: 20px;
+    font-weight: 600;
+    color: #8E78FF;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--theme-color);
+    margin-bottom: 24px;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 32px;
+    color: #4B4B4B;
+    border-bottom: 1px solid #ADC6EF;
+    padding-bottom: 24px;
+  }
+
+  .footer {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--theme-color);
+  }
+}
