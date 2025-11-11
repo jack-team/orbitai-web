@@ -1,0 +1,40 @@
+import type { FC } from 'react';
+import styles from './styles.module.scss';
+
+const Banner: FC = () => {
+  return (
+    <div className={styles.banner_wrapper}>
+      <div className={styles.banner_container}>
+        <div className={styles.banner_content}>
+          <div className={styles.content_inner}>
+            <div className={styles.title}>
+              <p>Transforming Global</p>
+              <p>Operations Through</p>
+              <p>Intelligent Automation</p>
+            </div>
+            <div className={styles.sub_title}>
+              Simplify your workflows and automate your tasks with our cutting-edge Al solutions tailored for supply chain and logistics
+            </div>
+            <button className={styles.book_btn}>Book a Demo</button>
+          </div>
+        </div>
+        <div className={styles.display}>
+          <div className={styles.display1}>
+            <img
+              alt="display"
+              src="/images/display1.jpg"
+            />
+          </div>
+          <div className={styles.display2}>
+            <img
+              alt="display"
+              src="/images/display2.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Banner;

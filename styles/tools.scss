@@ -1,0 +1,3 @@
+@mixin generate-variable($key, $value) {
+  --#{$key}: #{$value};
+}

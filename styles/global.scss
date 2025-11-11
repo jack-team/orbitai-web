@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--theme-color);
+}

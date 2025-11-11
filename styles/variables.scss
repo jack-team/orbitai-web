@@ -1,0 +1,20 @@
+@import './tools.scss';
+
+$content-width: 1232px;
+$header-height: 90px;
+$theme-color: #0A2540;
+
+// 全局 css 变量在这里加入
+$root-variables: (
+  (key: 'content-width', val: $content-width),
+  (key: 'header-height', val: $header-height),
+  (key: 'theme-color', val: $theme-color),
+);
+
+:root {
+  @each $item in $root-variables {
+    $key: map-get($item, key);
+    $val: map-get($item, val);
+    @include generate-variable($key, $val);
+  }
+}

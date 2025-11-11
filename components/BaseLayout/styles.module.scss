@@ -1,0 +1,31 @@
+.base_layout {
+  display: block;
+  height: 100vh;
+}
+
+.layout_content {
+  height: 100%;
+  overflow: hidden;
+}
+
+.base_header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  height: var(--header-height);
+}
+
+.base_header_content {
+  height: 100%;
+  width: var(--content-width);
+  margin: auto;
+  padding: 0 16px;
+
+  .band {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+  }
+}
