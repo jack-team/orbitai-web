@@ -6,6 +6,12 @@
 .layout_content {
   height: 100%;
   overflow: hidden;
+
+  .scroller {
+    &>div:first-child {
+      overflow: hidden auto !important;
+    }
+  }
 }
 
 .base_header {
@@ -13,8 +19,26 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 9999;
+  z-index: 99;
   height: var(--header-height);
+  transition: all .5s var(--ani-func);
+
+  &.transparent {
+    background: rgb(255, 255, 255, 0);
+
+    .logo_white {
+      display: block;
+    }
+  }
+
+  &.white {
+    background: rgb(255, 255, 255, 1);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, .1);
+
+    .logo_black {
+      display: block;
+    }
+  }
 }
 
 .base_header_content {
@@ -22,10 +46,26 @@
   width: var(--content-width);
   margin: auto;
   padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .band {
     height: 100%;
     display: inline-flex;
     align-items: center;
+  }
+
+  .logo_white,
+  .logo_black {
+    display: none;
+  }
+}
+
+.scroll_content.safe_area {
+  &::before {
+    content: "";
+    display: block;
+    height: var(--header-height);
   }
 }

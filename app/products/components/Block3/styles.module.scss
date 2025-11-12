@@ -1,17 +1,11 @@
 .container {
-  background: #fff;
-  padding: 140px 0;
+  background: #F6F9FC;
+  padding: 100px 0 120px 0;
 }
 
 .content {
   margin: auto;
   width: var(--content-width);
-
-  .test-1 {
-    font-size: 100px;
-    color: blue;
-    background: transparent;
-  }
 }
 
 .title {
@@ -20,9 +14,18 @@
   color: var(--theme-color);
   line-height: 1;
   text-align: center;
+  margin-bottom: 40px;
+}
+
+.desc {
+  font-size: 24px;
+  color: #4B4B4B;
+  line-height: 2;
+  text-align: center;
   margin-bottom: 80px;
 }
 
-.tab {
-  height: 570px;
+.cards {
+  display: flex;
+  gap: 80px;
 }

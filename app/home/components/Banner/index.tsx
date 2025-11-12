@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import classNames from 'classnames';
+import Button from '@/components/Button';
 import styles from './styles.module.scss';
 
 const Banner: FC = () => {
@@ -16,7 +17,7 @@ const Banner: FC = () => {
             <div className={styles.sub_title}>
               Simplify your workflows and automate your tasks with our cutting-edge Al solutions tailored for supply chain and logistics
             </div>
-            <button className={styles.book_btn}>Book a Demo</button>
+            <Button>Book a Demo</Button>
           </div>
         </div>
         <div className={styles.display}>

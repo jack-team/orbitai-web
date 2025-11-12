@@ -1,0 +1,55 @@
+.container {
+  width: 880px;
+  position: relative;
+  background: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 8px 20px 4px #0000000F;
+  margin: 100px auto 0 auto;
+  padding: 89px 100px 80px 100px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 9px;
+    background: linear-gradient(90deg, #FAAF00 0%,
+        #FD9600 8.9%, #FF740A 20.25%,
+        #FF5E79 36.25%, #A45AD3 46.75%,
+        #7F5BEC 54.25%, #605EFF 59%,
+        #03BAF5 74.45%, #437CFC 88.7%,
+        #5A65FE 92.8%, #915BE0 100%);
+  }
+}
+
+.item {
+  display: flex;
+
+  &+.item {
+    margin-top: 60px;
+  }
+}
+
+.icon {
+  margin-right: 40px;
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--theme-color);
+  margin-bottom: 12px;
+}
+
+.desc {
+  color: #4b4b4b;
+  font-size: 16px;
+  line-height: 22px;
+}

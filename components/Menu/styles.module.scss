@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  gap: 40px;
+
+  .icon_black,
+  .icon_white {
+    display: none;
+  }
+
+  .item {
+    cursor: pointer;
+  }
+
+  .label {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &.transparent {
+    .label {
+      color: #fff;
+    }
+
+    .icon_white {
+      display: block;
+    }
+  }
+
+  &.white {
+    .label {
+      color: var(--theme-color);
+    }
+
+    .icon_black {
+      display: block;
+    }
+  }
+}
+
+.menu {
+  .label {
+    font-size: 16px;
+  }
+
+  .submenu {
+    color: var(--theme-color);
+
+    :global(.ant-dropdown-menu-submenu-title) {
+      padding-inline-end: 28px !important;
+    }
+  }
+}

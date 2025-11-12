@@ -8,7 +8,7 @@ import Block4 from './components/Block4';
 
 const Home: FC = () => {
   return (
-    <BaseLayout auto>
+    <BaseLayout defaultMode="white">
       <Banner />
       <Block1 />
       <Block2 />

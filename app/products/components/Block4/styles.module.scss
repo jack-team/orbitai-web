@@ -1,17 +1,11 @@
 .container {
   background: #fff;
-  padding: 140px 0;
+  padding: 140px 0 160px 0;
 }
 
 .content {
   margin: auto;
   width: var(--content-width);
-
-  .test-1 {
-    font-size: 100px;
-    color: blue;
-    background: transparent;
-  }
 }
 
 .title {
@@ -23,6 +17,7 @@
   margin-bottom: 80px;
 }
 
-.tab {
-  height: 570px;
+.cards {
+  display: flex;
+  gap: 80px;
 }

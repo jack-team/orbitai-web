@@ -1,0 +1,50 @@
+.container {
+  border-radius: 24px;
+  padding: 40px 60px;
+  background: #fff;
+  box-shadow: 0px 8px 20px 4px #0000000F;
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--theme-color);
+    margin-bottom: 20px;
+  }
+
+  .desc {
+    height: 76px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 32px;
+    color: #4B4B4B;
+    border-bottom: 1px solid #ADC6EF;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .total {
+    font-size: 12px;
+    color: #4b4b4b;
+  }
+
+  .explore {
+    font-weight: 500;
+    font-size: 18px;
+    color: #8E78FF;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
