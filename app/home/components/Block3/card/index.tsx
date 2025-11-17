@@ -1,11 +1,9 @@
 import type { FC } from 'react';
 import Link from 'next/link';
-import Image, { type StaticImageData } from 'next/image';
-import iconJump from '@/assets/icons/icon_jump.svg?url';
 import styles from './styles.module.scss';
 
 export type CardData = {
-  icon: StaticImageData;
+  icon: string;
   title: string;
   desc: string;
   total: string;
@@ -19,7 +17,7 @@ const Card: FC<CardProps> = (props) => {
   const { data } = props;
   return (
     <div className={styles.container}>
-      <Image
+      <img
         alt="icon"
         src={data.icon}
         className={styles.icon}
@@ -33,7 +31,7 @@ const Card: FC<CardProps> = (props) => {
       <div className={styles.footer}>
         <div className={styles.total}>{data.total}</div>
         <Link className={styles.explore} href="/">
-          Explore <Image src={iconJump} alt="jump" />
+          Explore <img src="/icons/icon_jump.svg" alt="jump" />
         </Link>
       </div>
     </div>

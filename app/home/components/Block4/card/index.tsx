@@ -1,7 +1,4 @@
 import type { FC } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import iconJump from '@/assets/icons/icon_jump.svg?url';
 import styles from './styles.module.scss';
 
 export type CardData = {

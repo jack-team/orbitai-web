@@ -2,32 +2,28 @@ import type { FC } from 'react';
 import { Row, Col } from 'antd';
 import Card, { type CardData } from './card';
 import styles from './styles.module.scss';
-import iconWarehouse from '@/assets/icons/icon_warehouse.svg?url';
-import iconTrade from '@/assets/icons/icon_trade.svg?url';
-import iconCustoms from '@/assets/icons/icon_customs.svg?url';
-import iconOem from '@/assets/icons/icon_oem.svg?url';
 
 const items: CardData[] = [
   {
-    icon: iconWarehouse,
+    icon: '/icons/icon_warehouse.svg',
     title: 'Warehouse Operators​',
     desc: 'Paperless receiving, picking, and shipping​',
     total: '3 challenges • 3 solutions'
   },
   {
-    icon: iconTrade,
+    icon: '/icons/icon_trade.svg',
     title: 'Trade Distributors​',
     desc: 'Multi-brand distributors managing complex supplier networks and customer relationships​',
     total: '3 challenges • 3 solutions'
   },
   {
-    icon: iconCustoms,
+    icon: '/icons/icon_customs.svg',
     title: 'Customs Brokers​',
     desc: 'Trade compliance specialists handling complex international documentation​',
     total: '3 challenges • 3 solutions'
   },
   {
-    icon: iconOem,
+    icon: '/icons/icon_oem.svg',
     title: 'Food Processing Plants​​',
     desc: 'One time inquiry and purchase of ingredients based on the formula​',
     total: '3 challenges • 3 solutions'

@@ -1,7 +1,5 @@
 import type { FC } from 'react';
-import Image from 'next/image';
 import styles from './styles.module.scss';
-import iconAchieve from '@/assets/icons/icon_achieve.svg';
 
 const items = [
   {
@@ -24,9 +22,9 @@ const Cards: FC = () => {
       {items.map((item, i) => {
         return (
           <div key={i} className={styles.item}>
-            <Image
+            <img
               alt="icon"
-              src={iconAchieve}
+              src="/icons/icon_achieve.svg"
               className={styles.icon}
             />
             <div className={styles.content}>

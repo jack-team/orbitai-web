@@ -8,8 +8,11 @@ declare module '*.module.scss' {
   export default classes;
 }
 
-declare module '*.svg?url' {
-  const content: import('next/dist/shared/lib/get-img-props').StaticImageData;
-  export default content;
+declare module "*.svg" {
+  export function ReactComponent(
+    props: React.SVGProps<SVGSVGElement>,
+  ): React.ReactElement;
+  const url: string;
+  export default url;
 }
 

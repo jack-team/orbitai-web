@@ -1,9 +1,7 @@
 import type { FC } from 'react';
-import Image from 'next/image';
 import styles from './styles.module.scss';
 import Powers from './powers';
 import Cards from './cards';
-import iconAchieve from '@/assets/icons/icon_achieve.svg';
 
 const cardTexts = [
   {

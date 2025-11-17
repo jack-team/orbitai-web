@@ -23,8 +23,23 @@
 .footer_content_left {
   width: 394px;
 
-  .logo {
+  .band {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 4px;
     margin-bottom: 24px;
+
+    .logo {
+      color: #fff;
+      font-size: 44px;
+    }
+
+    .app_name {
+      font-weight: 600;
+      color: #fff;
+      font-size: 32px;
+    }
   }
 
   .title,

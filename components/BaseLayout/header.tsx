@@ -1,15 +1,15 @@
 "use client";
 import type { FC } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Icon from '@ant-design/icons';
 import classNames from 'classnames';
 import { useSafeState } from 'ahooks';
 import Menu, { type MenuItemType } from '@/components/Menu';
 import { usePageScroll } from '@/hooks/usePageScroll';
 import type { HeaderProps, ModeType } from './types';
-import logoWhite from '@/assets/logo-white.svg?url';
-import logoBlack from '@/assets/logo-black.svg?url';
+import Logo from '@/assets/logo.svg';
 import styles from './styles.module.scss';
+
 
 enum ModeEnum {
   WHITE = 'white',
@@ -93,18 +93,8 @@ const Header: FC<HeaderProps> = (props) => {
     <header className={classNames(styles.base_header, styles[mode])}>
       <div className={styles.base_header_content}>
         <Link href="/" className={styles.band}>
-          <Image
-            height={40}
-            alt="logo"
-            src={logoWhite}
-            className={styles.logo_white}
-          />
-          <Image
-            height={40}
-            alt="logo"
-            src={logoBlack}
-            className={styles.logo_black}
-          />
+          <Icon component={Logo} className={styles.logo} />
+          <div className={styles.app_name}>OrbitAi.dev</div>
         </Link>
         <Menu menus={menuItems} mode={mode} />
       </div>

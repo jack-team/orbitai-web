@@ -1,5 +1,4 @@
 import type { FC } from 'react';
-import Tabs from '@/components/Tabs';
 import styles from './styles.module.scss';
 
 const Step1: FC = () => {

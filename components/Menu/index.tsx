@@ -1,11 +1,11 @@
-import { type FC, type Key, type ReactElement, useMemo, Fragment } from 'react';
+import { type FC, type Key, type ReactElement, useMemo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Dropdown } from 'antd';
 import classNames from 'classnames';
-import { ModeType } from '@/components/BaseLayout/types'
-import iconWhite from '@/assets/icons/icon_down_white.svg?url';
-import iconBlack from '@/assets/icons/icon_down_black.svg?url';
+import Icon from '@ant-design/icons';
+import { ModeType } from '@/components/BaseLayout/types';
+import H5Menu from './h5Menu';
+import IconDown from '@/assets/icon_down.svg';
 import styles from './styles.module.scss';
 
 export type MenuItemType = {
@@ -31,18 +31,7 @@ const Menu: FC<MenuProps> = (props) => {
       const childs = item.children || [];
 
       const arrowNode = childs.length ?
-        <Fragment>
-          <Image
-            alt="icon"
-            src={iconBlack}
-            className={styles.icon_black}
-          />
-          <Image
-            alt="icon"
-            src={iconWhite}
-            className={styles.icon_white}
-          />
-        </Fragment> : null;
+        <Icon component={IconDown} className={styles.arrow} /> : null;
 
       const labelNode = path ?
         <Link
@@ -68,24 +57,33 @@ const Menu: FC<MenuProps> = (props) => {
 
   return (
     <div className={classNames(styles.container, styles[mode])}>
-      {items.map((item) => {
-        const childs = item.children || [];
-        return (
-          <div
-            key={item.key}
-            className={styles.item}
-          >
+      <div className={styles.content}>
+        {items.map((item) => {
+          const childs = item.children || [];
+
+          const element = childs.length > 0 ? (
             <Dropdown
               arrow
               placement="bottom"
               menu={{ items: childs }}
               overlayClassName={styles.menu}
+              openClassName={styles.menu_open}
             >
               {item.label}
             </Dropdown>
-          </div>
-        );
-      })}
+          ) : item.label;
+
+          return (
+            <div
+              key={item.key}
+              className={styles.item}
+            >
+              {element}
+            </div>
+          );
+        })}
+      </div>
+      <H5Menu menus={menus} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import logoWhite from '@/assets/logo-white.svg?url';
+import Icon from '@ant-design/icons';
+import Logo from '@/assets/logo.svg';
 import styles from './styles.module.scss';
 
 const menus = [
@@ -37,11 +37,10 @@ const BaseFooter: FC = () => {
       <div className={styles.footer_content}>
         <div className={styles.content_top}>
           <div className={styles.footer_content_left}>
-            <Image
-              alt="logo"
-              src={logoWhite}
-              className={styles.logo}
-            />
+            <Link href="/" className={styles.band}>
+              <Icon component={Logo} className={styles.logo} />
+              <div className={styles.app_name}>OrbitAi.dev</div>
+            </Link>
             <div className={styles.title}>
               Transforming global operations through intelligent automation. Simplify your workflows and automate your tasks with cutting-edge AI solutions.
             </div>
