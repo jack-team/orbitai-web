@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { Row, Col } from 'antd';
 import styles from './styles.module.scss';
 
 const items = [
@@ -26,25 +27,27 @@ const items = [
 
 const powers: FC = () => {
   return (
-    <div className={styles.container}>
+    <Row className={styles.container} gutter={[60, 60]}>
       {items.map((item, i) => {
         return (
-          <div key={i} className={styles.item}>
-            <img
-              alt="icon"
-              src={item.icon}
-              className={styles.icon}
-            />
-            <div className={styles.title}>
-              {item.title}
+          <Col lg={6} sm={12}>
+            <div key={i} className={styles.item}>
+              <img
+                alt="icon"
+                src={item.icon}
+                className={styles.icon}
+              />
+              <div className={styles.title}>
+                {item.title}
+              </div>
+              <div className={styles.desc}>
+                {item.desc}
+              </div>
             </div>
-            <div className={styles.desc}>
-              {item.desc}
-            </div>
-          </div>
+          </Col>
         );
       })}
-    </div>
+    </Row>
   );
 }
 

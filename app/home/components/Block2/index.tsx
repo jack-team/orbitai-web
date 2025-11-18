@@ -3,21 +3,6 @@ import styles from './styles.module.scss';
 import Powers from './powers';
 import Cards from './cards';
 
-const cardTexts = [
-  {
-    title: 'Enterprise-Grade Security',
-    desc: 'Bank-level encryption and compliance with industry standards'
-  },
-  {
-    title: 'Scalable Architecture',
-    desc: 'Built to grow with your business, from startup to enterprise'
-  },
-  {
-    title: 'Real-Time Processing',
-    desc: 'Lightning-fast data processing and instant insights'
-  }
-];
-
 const Block2: FC = () => {
   return (
     <div className={styles.container}>

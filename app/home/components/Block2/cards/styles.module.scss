@@ -8,6 +8,15 @@
   margin: 100px auto 0 auto;
   padding: 89px 100px 80px 100px;
 
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: 576px) {
+    padding: 100px 16px;
+    margin: 50px auto 0 auto;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -29,11 +38,19 @@
 
   &+.item {
     margin-top: 60px;
+
+    @media (max-width: 576px) {
+      margin-top: 32px;
+    }
   }
 }
 
 .icon {
   margin-right: 40px;
+
+  @media (max-width: 576px) {
+    margin-right: 24px;
+  }
 }
 
 .content {
@@ -46,10 +63,19 @@
   font-weight: 500;
   color: var(--theme-color);
   margin-bottom: 12px;
+
+  @media (max-width: 576px) {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
 }
 
 .desc {
   color: #4b4b4b;
   font-size: 16px;
   line-height: 22px;
+
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
 }

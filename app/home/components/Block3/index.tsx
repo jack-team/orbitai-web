@@ -43,7 +43,7 @@ const Block3: FC = () => {
         <Row gutter={[60, 60]}>
           {items.map((item, i) => {
             return (
-              <Col key={i} span={12}>
+              <Col key={i} lg={12} sm={12}>
                 <Card data={item} />
               </Col>
             );

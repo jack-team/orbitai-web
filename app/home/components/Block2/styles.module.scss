@@ -2,6 +2,10 @@
   padding: 100px 0 140px 0;
   position: relative;
 
+  @media (max-width: 576px) {
+    padding: 48px 0;
+  }
+
   &::after {
     content: "";
     height: 462px;
@@ -19,6 +23,11 @@
   width: var(--content-width);
   position: relative;
   z-index: 1;
+
+  @media (max-width: 1200px) {
+    padding: 0 16px;
+    width: 100%;
+  }
 }
 
 .title {
@@ -28,6 +37,10 @@
   line-height: 1;
   text-align: center;
   margin-bottom: 40px;
+
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
 }
 
 .desc {
@@ -35,4 +48,8 @@
   font-size: 24px;
   text-align: center;
   color: var(--link-color);
+
+  @media (max-width: 576px) {
+    font-size: 16px;
+  }
 }

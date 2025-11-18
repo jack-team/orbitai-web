@@ -1,11 +1,20 @@
 .container {
   background: #fff;
   padding: 140px 0 160px 0;
+
+  @media (max-width: 576px) {
+    padding: 40px 0;
+  }
 }
 
 .content {
   margin: auto;
+  padding: 0 16px;
   width: var(--content-width);
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 }
 
 .title {
@@ -15,9 +24,8 @@
   line-height: 1;
   text-align: center;
   margin-bottom: 80px;
-}
 
-.cards {
-  display: flex;
-  gap: 80px;
+  @media (max-width: 576px) {
+    font-size: 30px;
+  }
 }

@@ -1,11 +1,24 @@
 .container {
   background: #fff;
   padding: 140px 0;
+
+  @media (max-width: 992px) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 48px 0;
+  }
 }
 
 .content {
   margin: auto;
+  padding: 0 16px;
   width: var(--content-width);
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 
   .test-1 {
     font-size: 100px;
@@ -21,6 +34,11 @@
   line-height: 1;
   text-align: center;
   margin-bottom: 80px;
+
+  @media (max-width: 576px) {
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
 }
 
 .tab {

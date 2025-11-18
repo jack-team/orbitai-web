@@ -1,13 +1,14 @@
 
 
 .container {
-  display: flex;
   margin-top: 80px;
-  gap: 60px;
+
+  @media (max-width: 576px) {
+    margin-top: 48px;
+  }
 }
 
 .item {
-  flex: 1;
   padding-left: 24px;
   position: relative;
 

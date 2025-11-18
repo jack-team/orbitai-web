@@ -70,6 +70,12 @@ $ani-delay: .85s;
   z-index: 1;
   min-height: 760px;
   height: calc(100vh - var(--header-height));
+
+  @media (max-width: 576px) {
+    min-height: auto;
+    height: auto;
+    padding: 48px 0;
+  }
 }
 
 .banner_content {
@@ -125,6 +131,7 @@ $ani-delay: .85s;
 
     @media (max-width: 576px) {
       font-size: 30px;
+      margin-bottom: 36px;
     }
   }
 
