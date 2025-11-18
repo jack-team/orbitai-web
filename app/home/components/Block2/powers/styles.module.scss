@@ -6,6 +6,10 @@
   flex-wrap: wrap;
   gap: 60px;
 
+  @include respond-down('lg-m') {
+    gap: 40px;
+  }
+
   @include respond-down('sm') {
     flex-direction: column;
     margin-top: 48px;
@@ -16,11 +20,7 @@
 .item {
   padding-left: 24px;
   position: relative;
-  width: calc(50% - 30px);
-
-  @include respond-down('sm') {
-    width: 100%;
-  }
+  flex: 1;
 
   &::before {
     content: "";
@@ -32,12 +32,35 @@
     background: #122A47;
   }
 
+  @include respond-down('lg-m') {
+    flex: none;
+    width: calc(50% - 20px);
+  }
+
+  @include respond-down('sm') {
+    width: 100%;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .icon {
   display: block;
   width: 48px;
   margin-bottom: 20px;
+
+  @include respond-down('sm') {
+    width: 56px;
+    margin-bottom: 16px;
+  }
 }
 
 .title {
@@ -46,10 +69,6 @@
   font-weight: 500;
   line-height: 1;
   position: relative;
-
-  @include respond-down('sm') {
-    font-size: 16px;
-  }
 
   &::before {
     content: "";
@@ -60,6 +79,16 @@
     top: 3px;
     background: #8E78FF;
   }
+
+  @include respond-down('sm') {
+    font-size: 16px;
+    color: var(--theme-color);
+
+    &::before {
+      display: none;
+    }
+  }
+
 }
 
 .desc {
@@ -71,5 +100,6 @@
   @include respond-down('sm') {
     font-size: 12px;
     margin-top: 12px;
+    color: #4b4b4b;
   }
 }

@@ -28,10 +28,14 @@ const Menu: FC<MenuProps> = (props) => {
     const getItem = (item: MenuItemType): MenuItemType => {
       const path = item.path;
       const label = item.label;
-      const childs = item.children || [];
+      const childs = item.children;
 
-      const arrowNode = childs.length ?
-        <Icon component={IconDown} className={styles.arrow} /> : null;
+      const arrowNode = childs?.length ? (
+        <Icon
+          component={IconDown}
+          className={styles.arrow}
+        />
+      ) : null;
 
       const labelNode = path ?
         <Link

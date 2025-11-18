@@ -7,6 +7,10 @@
   @include respond-down('lg') {
     padding: 70px 0;
   }
+
+  @include respond-down('sm') {
+    padding: 48px 0;
+  }
 }
 
 .content {
@@ -19,7 +23,7 @@
   }
 
   @include respond-down('sm') {
-    padding: 0 16px;
+    padding: 0;
   }
 }
 

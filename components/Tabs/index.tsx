@@ -24,20 +24,22 @@ const Tabs: FC<TabsProps> = (props) => {
 
   return (
     <div className={styles.tabs}>
-      <div className={styles.left_tabs}>
-        {items.map((item, i) => {
-          const active = i === activeIndex;
-          return (
-            <div
-              key={i}
-              onClick={() => handleTabClick(i)}
-              className={classNames(styles.tab_item, active && styles.active)}
-            >
-              <div className={styles.tab_title}>{item.title}</div>
-              {!!item.subTitle && <div className={styles.tab_desc}>{item.subTitle}</div>}
-            </div>
-          );
-        })}
+      <div className={styles.left_tabs_wrapper}>
+        <div className={styles.left_tabs}>
+          {items.map((item, i) => {
+            const active = i === activeIndex;
+            return (
+              <div
+                key={i}
+                onClick={() => handleTabClick(i)}
+                className={classNames(styles.tab_item, active && styles.active)}
+              >
+                <div className={styles.tab_title}>{item.title}</div>
+                {!!item.subTitle && <div className={styles.tab_desc}>{item.subTitle}</div>}
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className={styles.tab_panes}>
         {items.map((item, i) => {

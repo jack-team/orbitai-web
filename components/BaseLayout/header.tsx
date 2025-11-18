@@ -24,7 +24,7 @@ const menuItems: MenuItemType[] = [
     children: [
       {
         key: 'a',
-        label: 'Product A',
+        label: 'Product A xxx aaasss',
         path: '/a'
       },
       {

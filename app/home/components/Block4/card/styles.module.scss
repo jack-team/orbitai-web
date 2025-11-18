@@ -17,6 +17,11 @@
     padding: 32px 16px 16px 16px;
   }
 
+  @include respond-down('sm') {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
   &::before {
     content: "";
     position: absolute;

@@ -19,15 +19,18 @@ const Block1: FC = () => {
             },
             {
               title: 'SmartClear Al',
-              subTitle: 'Automate customs clearance workflows'
+              subTitle: 'Automate customs clearance workflows',
+              children: <Step1 />
             },
             {
               title: 'FormuPilot',
-              subTitle: 'Smart formulation and quoting'
+              subTitle: 'Smart formulation and quoting',
+              children: <Step1 />
             },
             {
               title: 'IngredientsGPT',
-              subTitle: 'Al-powered ingredient intelligence'
+              subTitle: 'Al-powered ingredient intelligence',
+              children: <Step1 />
             }
           ]}
         />

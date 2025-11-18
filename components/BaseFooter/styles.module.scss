@@ -113,6 +113,14 @@
     @include respond-down('xl') {
       font-size: 16px;
     }
+
+    @include respond-down('md') {
+      font-size: 14px;
+    }
+
+    @include respond-down('sm') {
+      font-size: 12px;
+    }
   }
 
   .desc_text {
@@ -120,7 +128,7 @@
     margin-top: 40px;
 
     @include respond-down('sm') {
-      font-size: 14px;
+      font-size: 12px;
       margin-top: 24px;
     }
   }
@@ -148,8 +156,12 @@
       font-size: 20px;
     }
 
-    @include respond-down('sm') {
+    @include respond-down('md') {
       font-size: 16px;
+    }
+
+    @include respond-down('sm') {
+      font-size: 14px;
     }
   }
 
@@ -172,8 +184,12 @@
           font-size: 16px;
         }
 
-        @include respond-down('sm') {
+        @include respond-down('md') {
           font-size: 14px;
+        }
+
+        @include respond-down('sm') {
+          font-size: 12px;
         }
 
         &:hover {
@@ -220,6 +236,10 @@
       width: auto;
       font-size: 14px;
     }
+
+    @include respond-down('sm') {
+      font-size: 12px;
+    }
   }
 
   .others {
@@ -252,6 +272,9 @@
         font-size: 14px;
       }
 
+      @include respond-down('sm') {
+        font-size: 12px;
+      }
     }
   }
 }
