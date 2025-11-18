@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { Row, Col } from 'antd';
+import CenterContent from '@/components/CenterContent';
 import Card, { type CardData } from './card';
 import styles from './styles.module.scss';
 
@@ -21,7 +21,7 @@ const items: CardData[] = [
 const Block4: FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
+      <CenterContent>
         <div className={styles.title}>
           Proven in Real-World Operations
         </div>
@@ -34,7 +34,7 @@ const Block4: FC = () => {
             );
           })}
         </div>
-      </div>
+      </CenterContent>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import Link from 'next/link';
 import Icon from '@ant-design/icons';
+import CenterContent from '../CenterContent';
 import Logo from '@/assets/logo.svg';
 import styles from './styles.module.scss';
 
@@ -34,7 +35,7 @@ const menus = [
 const BaseFooter: FC = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer_content}>
+      <CenterContent className={styles.footer_content}>
         <div className={styles.content_top}>
           <div className={styles.footer_content_left}>
             <Link href="/" className={styles.band}>
@@ -79,7 +80,7 @@ const BaseFooter: FC = () => {
             <Link href="/">Accessibility</Link>
           </div>
         </div>
-      </div>
+      </CenterContent>
     </footer>
   );
 }

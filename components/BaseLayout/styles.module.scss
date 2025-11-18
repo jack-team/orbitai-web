@@ -57,19 +57,8 @@
 
 .base_header_content {
   height: 100%;
-  width: var(--content-width);
-  margin: auto;
   display: flex;
   align-items: center;
-
-  @include respond-down('xl') {
-    width: 100%;
-    padding: 0 36px;
-  }
-
-  @include respond-down('sm') {
-    padding: 0 16px;
-  }
 
   .band {
     display: flex;

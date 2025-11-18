@@ -13,21 +13,6 @@
   }
 }
 
-.content {
-  margin: auto;
-  width: var(--content-width);
-
-  @include respond-down('xl') {
-    padding: 0 36px;
-    width: 100%;
-  }
-
-  @include respond-down('sm') {
-    padding: 0 16px;
-    width: 100%;
-  }
-}
-
 .title {
   font-size: 48px;
   font-weight: 600;

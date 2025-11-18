@@ -5,6 +5,7 @@ import Icon from '@ant-design/icons';
 import classNames from 'classnames';
 import { useSafeState } from 'ahooks';
 import Menu, { type MenuItemType } from '@/components/Menu';
+import CenterContent from '@/components/CenterContent';
 import { usePageScroll } from '@/hooks/usePageScroll';
 import type { HeaderProps, ModeType } from './types';
 import Logo from '@/assets/logo.svg';
@@ -91,13 +92,13 @@ const Header: FC<HeaderProps> = (props) => {
 
   return (
     <header className={classNames(styles.base_header, styles[mode])}>
-      <div className={styles.base_header_content}>
+      <CenterContent className={styles.base_header_content}>
         <Link href="/" className={styles.band}>
           <Icon component={Logo} className={styles.logo} />
           <div className={styles.app_name}>OrbitAi.dev</div>
         </Link>
         <Menu menus={menuItems} mode={mode} />
-      </div>
+      </CenterContent>
     </header>
   )
 }

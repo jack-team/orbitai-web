@@ -1,12 +1,13 @@
 import type { FC } from 'react';
 import Tabs from '@/components/Tabs';
+import CenterContent from '@/components/CenterContent';
 import styles from './styles.module.scss';
 import Step1 from './step1';
 
 const Block1: FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
+      <CenterContent className={styles.content}>
         <div className={styles.title}>
           Our Product Ecosystem
         </div>
@@ -34,7 +35,7 @@ const Block1: FC = () => {
             }
           ]}
         />
-      </div>
+      </CenterContent>
     </div>
   );
 }

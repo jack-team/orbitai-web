@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import classNames from 'classnames';
+import CenterContent from '@/components/CenterContent';
 import Button from '@/components/Button';
 import styles from './styles.module.scss';
 
@@ -7,7 +8,7 @@ const Banner: FC = () => {
   return (
     <div className={classNames(styles.banner_wrapper)}>
       <div className={styles.banner_container}>
-        <div className={styles.banner_content}>
+        <CenterContent className={styles.banner_content}>
           <div className={styles.content_inner}>
             <div className={styles.title}>
               <p>Transforming Global</p>
@@ -19,7 +20,7 @@ const Banner: FC = () => {
             </div>
             <Button className={styles.book_btn}>Book a Demo</Button>
           </div>
-        </div>
+        </CenterContent>
         <div className={styles.display}>
           <div className={styles.display1}>
             <img

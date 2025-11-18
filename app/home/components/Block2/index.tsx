@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import CenterContent from '@/components/CenterContent';
 import styles from './styles.module.scss';
 import Powers from './powers';
 import Cards from './cards';
@@ -6,7 +7,7 @@ import Cards from './cards';
 const Block2: FC = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
+      <CenterContent className={styles.content}>
         <div className={styles.title}>
           The Power of our Technology
         </div>
@@ -15,7 +16,7 @@ const Block2: FC = () => {
         </div>
         <Powers />
         <Cards />
-      </div>
+      </CenterContent>
     </div>
   );
 }

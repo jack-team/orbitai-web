@@ -11,17 +11,7 @@
 }
 
 .footer_content {
-  margin: auto;
-  width: var(--content-width);
-
-  @include respond-down('xl') {
-    padding: 0 36px;
-    width: 100%;
-  }
-
-  @include respond-down('sm') {
-    padding: 0 24px;
-  }
+  width: 100%;
 }
 
 .content_top {

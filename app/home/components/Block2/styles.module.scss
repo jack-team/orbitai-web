@@ -29,19 +29,8 @@
 }
 
 .content {
-  margin: auto;
-  width: var(--content-width);
   position: relative;
   z-index: 1;
-
-  @include respond-down('xl') {
-    padding: 0 36px;
-    width: 100%;
-  }
-
-  @include respond-down('sm') {
-    padding: 0 16px;
-  }
 }
 
 .title {
