@@ -1,16 +1,26 @@
-
+@import '@/styles/responsive.scss';
 
 .container {
   margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
 
-  @media (max-width: 576px) {
+  @include respond-down('sm') {
+    flex-direction: column;
     margin-top: 48px;
+    gap: 24px;
   }
 }
 
 .item {
   padding-left: 24px;
   position: relative;
+  width: calc(50% - 30px);
+
+  @include respond-down('sm') {
+    width: 100%;
+  }
 
   &::before {
     content: "";
@@ -21,6 +31,7 @@
     top: 0;
     background: #122A47;
   }
+
 }
 
 .icon {
@@ -35,6 +46,10 @@
   font-weight: 500;
   line-height: 1;
   position: relative;
+
+  @include respond-down('sm') {
+    font-size: 16px;
+  }
 
   &::before {
     content: "";
@@ -52,4 +67,9 @@
   line-height: 22px;
   color: #BEBEBE;
   margin-top: 20px;
+
+  @include respond-down('sm') {
+    font-size: 12px;
+    margin-top: 12px;
+  }
 }

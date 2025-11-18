@@ -1,28 +1,24 @@
+@import '@/styles/responsive.scss';
+
 .tabs {
   display: flex;
   gap: 96px;
 
-  @media (max-width: 1200px) {
+  @include respond-down('xl') {
     gap: 36px;
   }
 
-  @media (max-width: 992px) {
+  @include respond-down('lg') {
     gap: 16px;
   }
 
-  @media (max-width: 576px) {
+  @include respond-down('sm') {
     gap: 24px;
     flex-direction: column;
   }
 
   .left_tabs {
     position: relative;
-
-    @media (max-width: 576px) {
-      display: block;
-      white-space: nowrap;
-      overflow-x: auto;
-    }
 
     &::before {
       content: "";
@@ -32,6 +28,24 @@
       bottom: 0;
       width: 2px;
       background: #F6F9FC;
+    }
+
+    @include respond-down('sm') {
+      display: block;
+      white-space: nowrap;
+      overflow-x: auto;
+      text-align: center;
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::before {
+        display: none;
+      }
     }
   }
 
@@ -53,7 +67,7 @@
       transition: all .3s var(--ani-func);
       transform: translateY(-100%);
 
-      @media (max-width: 576px) {
+      @include respond-down('sm') {
         right: 0;
         width: auto;
         height: 2px;
@@ -66,26 +80,25 @@
     &+.tab_item {
       margin-top: 60px;
 
-      @media (max-width: 992px) {
+      @include respond-down('lg') {
         margin-top: 24px
       }
 
-      @media (max-width: 576px) {
+      @include respond-down('sm') {
         margin-top: 0;
-        margin-left: 16px;
+        margin-left: 20px;
       }
     }
 
-    @media (max-width: 992px) {
+    @include respond-down('lg') {
       width: 150px;
       padding-left: 16px;
     }
 
-    @media (max-width: 576px) {
+    @include respond-down('sm') {
       width: auto;
       display: inline-block;
-      padding-left: 0;
-      padding-bottom: 16px;
+      padding: 16px 0;
     }
 
     &.active {
@@ -107,11 +120,11 @@
     margin-bottom: 12px;
     line-height: 1;
 
-    @media (max-width: 992px) {
+    @include respond-down('lg') {
       font-size: 16px;
     }
 
-    @media (max-width: 576px) {
+    @include respond-down('sm') {
       white-space: nowrap;
       font-size: 14px;
       margin-bottom: 0;
@@ -124,11 +137,11 @@
     color: #4B4B4B;
     line-height: 1.5;
 
-    @media (max-width: 992px) {
+    @include respond-down('lg') {
       font-size: 12px;
     }
 
-    @media (max-width: 576px) {
+    @include respond-down('sm') {
       display: none;
     }
   }

@@ -64,18 +64,16 @@ $content-height: 662px;
     transform: translate3d(100px, 0, 0);
     background-image: url(/images/banner-bg.jpg);
     animation: RightIn $ani-delay $ani-func .5s forwards;
-
-    @include respond-down('md') {
-      display: none;
-    }
   }
 }
 
 .banner_container {
+  $fullHeight: calc(100vh - var(--header-height));
+
   position: relative;
   z-index: 1;
   min-height: 760px;
-  height: calc(100vh - var(--header-height));
+  height: $fullHeight;
 
   @include respond-down('lg') {
     height: auto;
@@ -84,9 +82,9 @@ $content-height: 662px;
   }
 
   @include respond-down('md') {
-    height: auto;
+    padding: 0;
     min-height: auto;
-    padding: 48px 0;
+    height: $fullHeight;
   }
 }
 
@@ -141,6 +139,10 @@ $content-height: 662px;
       text-align: center;
       align-items: center;
     }
+
+    @include respond-down('sm') {
+      gap: 60px;
+    }
   }
 
   .title {
@@ -164,6 +166,10 @@ $content-height: 662px;
     @include respond-down('lg-m') {
       font-size: 30px;
     }
+
+    @include respond-down('sm') {
+      font-size: 24px;
+    }
   }
 
   .sub_title {
@@ -178,12 +184,21 @@ $content-height: 662px;
     @include respond-down('lg-m') {
       font-size: 16px;
     }
+
+    @include respond-down('sm') {
+      font-size: 14px;
+    }
   }
 
   .book_btn {
     @include respond-down('xl') {
       height: 60px;
       font-size: 20px;
+    }
+
+    @include respond-down('sm') {
+      height: 48px;
+      font-size: 16px;
     }
   }
 }

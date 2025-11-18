@@ -1,8 +1,25 @@
+@import '@/styles/responsive.scss';
+
 .container {
+  height: 100%;
   border-radius: 24px;
   padding: 40px 60px;
   background: #fff;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0px 8px 20px 4px #0000000F;
+
+  @include respond-down('xl') {
+    padding: 24px 36px;
+  }
+
+  @include respond-down('lg') {
+    padding: 20px 30px;
+  }
+
+  @include respond-down('md') {
+    padding: 16px 24px;
+  }
 
   .icon {
     width: 80px;
@@ -12,20 +29,32 @@
   }
 
   .title {
+    flex: 1;
     font-weight: 500;
     font-size: 24px;
     line-height: 1;
     color: var(--theme-color);
     margin-bottom: 20px;
+
+    @include respond-down('xl') {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
   }
 
   .desc {
-    height: 76px;
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 32px;
+    padding-bottom: 24px;
     color: #4B4B4B;
     border-bottom: 1px solid #ADC6EF;
+
+    @include respond-down('xl') {
+      font-size: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
   }
 
   .footer {
@@ -46,5 +75,10 @@
     display: flex;
     align-items: center;
     gap: 12px;
+
+    @include respond-down('xl') {
+      font-size: 14px;
+      gap: 6px;
+    }
   }
 }

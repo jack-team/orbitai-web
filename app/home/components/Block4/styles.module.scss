@@ -1,18 +1,29 @@
+@import '@/styles/responsive.scss';
+
 .container {
   background: #fff;
   padding: 140px 0 160px 0;
 
-  @media (max-width: 576px) {
-    padding: 40px 0;
+  @include respond-down('md') {
+    padding: 60px 0;
+  }
+
+  @include respond-down('sm') {
+    padding: 48px 0;
   }
 }
 
 .content {
   margin: auto;
-  padding: 0 16px;
   width: var(--content-width);
 
-  @media (max-width: 1200px) {
+  @include respond-down('xl') {
+    padding: 0 36px;
+    width: 100%;
+  }
+
+  @include respond-down('sm') {
+    padding: 0 16px;
     width: 100%;
   }
 }
@@ -25,7 +36,39 @@
   text-align: center;
   margin-bottom: 80px;
 
-  @media (max-width: 576px) {
+  @include respond-down('xl') {
     font-size: 30px;
+  }
+
+  @include respond-down('sm') {
+    font-size: 24px;
+     margin-bottom: 48px;
+  }
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+
+  .item {
+    width: calc(50% - 40px);
+  }
+
+  @include respond-down('xl') {
+    gap: 40px;
+
+    .item {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @include respond-down('md') {
+    gap: 36px;
+    flex-direction: column;
+
+    .item {
+      width: 100%;
+    }
   }
 }

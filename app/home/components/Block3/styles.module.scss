@@ -1,19 +1,30 @@
+@import '@/styles/responsive.scss';
+
 .container {
   background: #F6F9FC;
   padding: 100px 0 120px 0;
+  display: flex;
 
-  @media (max-width: 576px) {
+  @include respond-down('md') {
+    padding: 60px 0;
+  }
+
+  @include respond-down('sm') {
     padding: 48px 0;
   }
 }
 
 .content {
   margin: auto;
-  padding: 0 16px;
   width: var(--content-width);
 
-  @media (max-width: 1200px) {
+  @include respond-down('xl') {
     width: 100%;
+    padding: 0 36px;
+  }
+
+  @include respond-down('sm') {
+    padding: 0 16px;
   }
 }
 
@@ -23,10 +34,14 @@
   color: var(--theme-color);
   line-height: 1;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 
-  @media (max-width: 576px) {
+  @include respond-down('md') {
     font-size: 30px;
+  }
+
+  @include respond-down('sm') {
+    font-size: 24px;
   }
 }
 
@@ -37,7 +52,39 @@
   text-align: center;
   margin-bottom: 80px;
 
-  @media (max-width: 576px) {
+  @include respond-down('md') {
+    font-size: 20px;
+  }
+
+  @include respond-down('sm') {
     font-size: 16px;
+    margin-bottom: 48px;
+  }
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+
+  .item {
+    width: calc(50% - 40px);
+  }
+
+  @include respond-down('xl') {
+    gap: 40px;
+
+    .item {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @include respond-down('md') {
+    gap: 36px;
+    flex-direction: column;
+
+    .item {
+      width: 100%;
+    }
   }
 }

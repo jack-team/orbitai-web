@@ -25,15 +25,15 @@ const Block4: FC = () => {
         <div className={styles.title}>
           Proven in Real-World Operations
         </div>
-        <Row gutter={[40, 40]}>
+        <div className={styles.items}>
           {items.map((item, i) => {
             return (
-              <Col key={i} lg={12} sm={6}>
+              <div key={i} className={styles.item}>
                 <Card data={item} />
-              </Col>
+              </div>
             );
           })}
-        </Row>
+        </div>
       </div>
     </div>
   );

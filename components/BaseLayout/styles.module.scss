@@ -86,6 +86,10 @@
       @include respond-down('md') {
         display: none;
       }
+
+      @include respond-down('sm') {
+        display: block;
+      }
     }
 
     @include respond-down('lg') {

@@ -27,27 +27,25 @@ const items = [
 
 const powers: FC = () => {
   return (
-    <Row className={styles.container} gutter={[60, 60]}>
+    <div className={styles.container}>
       {items.map((item, i) => {
         return (
-          <Col lg={6} sm={12}>
-            <div key={i} className={styles.item}>
-              <img
-                alt="icon"
-                src={item.icon}
-                className={styles.icon}
-              />
-              <div className={styles.title}>
-                {item.title}
-              </div>
-              <div className={styles.desc}>
-                {item.desc}
-              </div>
+          <div key={i} className={styles.item}>
+            <img
+              alt="icon"
+              src={item.icon}
+              className={styles.icon}
+            />
+            <div className={styles.title}>
+              {item.title}
             </div>
-          </Col>
+            <div className={styles.desc}>
+              {item.desc}
+            </div>
+          </div>
         );
       })}
-    </Row>
+    </div>
   );
 }
 

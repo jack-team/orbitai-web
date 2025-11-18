@@ -40,15 +40,15 @@ const Block3: FC = () => {
         <div className={styles.desc}>
           Each customer type faces distinct operational bottlenecks. Our AI helpers are specifically designed to address you's pain points with measurable results.
         </div>
-        <Row gutter={[60, 60]}>
+        <div className={styles.items}>
           {items.map((item, i) => {
             return (
-              <Col key={i} lg={12} sm={12}>
+              <div className={styles.item} key={i}>
                 <Card data={item} />
-              </Col>
+              </div>
             );
           })}
-        </Row>
+        </div>
       </div>
     </div>
   );
