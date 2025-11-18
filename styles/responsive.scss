@@ -1,0 +1,45 @@
+// 断点配置 (移动优先)
+$breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg-m': 872px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px) !default;
+
+// 获取断点值
+@function breakpoint($name) {
+  @return map-get($breakpoints, $name
+);
+}
+
+// 媒体查询混合宏 - 在多个断点之间
+@mixin respond-between($lower, $upper) {
+  $min-width: breakpoint($lower);
+  $max-width: breakpoint($upper);
+
+  $max-width: $max-width - 0.02px;
+
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+// 媒体查询混合宏 - 向上断点 (min-width)
+@mixin respond-up($breakpoint) {
+  $value: breakpoint($breakpoint);
+
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+// 媒体查询混合宏 - 向下断点 (max-width)
+@mixin respond-down($breakpoint) {
+  $value: breakpoint($breakpoint);
+
+  @media (max-width: $value) {
+    @content;
+  }
+}

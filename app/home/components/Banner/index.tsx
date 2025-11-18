@@ -17,7 +17,7 @@ const Banner: FC = () => {
             <div className={styles.sub_title}>
               Simplify your workflows and automate your tasks with our cutting-edge Al solutions tailored for supply chain and logistics
             </div>
-            <Button>Book a Demo</Button>
+            <Button className={styles.book_btn}>Book a Demo</Button>
           </div>
         </div>
         <div className={styles.display}>

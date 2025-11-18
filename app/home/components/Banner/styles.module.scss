@@ -1,7 +1,9 @@
 @import '@/styles/variables.scss';
+@import '@/styles/responsive.scss';
 
 $inner-width: 650px;
 $ani-delay: .85s;
+$content-height: 662px;
 
 @keyframes RightIn {
   from {
@@ -43,25 +45,29 @@ $ani-delay: .85s;
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(120.92deg, #003063 0%, #0A2540 49.29%);
   padding-top: var(--header-height);
+  background: linear-gradient(120.92deg, #003063 0%, #0A2540 49.29%);
 
   &::before {
     content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
     z-index: 0;
     opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: right bottom;
-    opacity: 0;
     transform: translate3d(100px, 0, 0);
     background-image: url(/images/banner-bg.jpg);
     animation: RightIn $ani-delay $ani-func .5s forwards;
+
+    @include respond-down('md') {
+      display: none;
+    }
   }
 }
 
@@ -71,9 +77,15 @@ $ani-delay: .85s;
   min-height: 760px;
   height: calc(100vh - var(--header-height));
 
-  @media (max-width: 576px) {
-    min-height: auto;
+  @include respond-down('lg') {
     height: auto;
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  @include respond-down('md') {
+    height: auto;
+    min-height: auto;
     padding: 48px 0;
   }
 }
@@ -82,31 +94,52 @@ $ani-delay: .85s;
   height: 100%;
   margin: auto;
   width: var(--content-width);
-  padding: 0 16px;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 2;
 
-  @media (max-width: 1200px) {
-    padding: 0 16px;
+  @include respond-down('xl') {
     width: 100%;
+    padding: 0 0 0 36px;
+  }
+
+  @include respond-down('md') {
+    width: 100%;
+    padding: 0 36px;
+  }
+
+  @include respond-down('sm') {
+    padding: 0 24px;
   }
 
   .content_inner {
-    height: 662px;
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
+    align-items: flex-start;
+    height: $content-height;
     width: $inner-width;
     opacity: 0;
     transform: translate3d(-100px, 0, 0);
     animation: LeftIn $ani-delay $ani-func .5s forwards;
+    padding: 16px 0 0 0;
 
-    @media (max-width: 1160px) {
-      width: 100%;
-      text-align: center;
+    @include respond-down('xl') {
+      width: 50vw;
+      height: $content-height *.9;
     }
 
-    @media (max-width: 768px) {
+    @include respond-down('lg-m') {
+      height: $content-height *.8;
+    }
+
+    @include respond-down('md') {
+      width: 100%;
       height: auto;
+      padding: 0;
+      text-align: center;
+      align-items: center;
     }
   }
 
@@ -114,7 +147,6 @@ $ani-delay: .85s;
     font-size: 50px;
     color: #fff;
     font-weight: 700;
-    margin-bottom: 60px;
 
     p {
       margin: 0;
@@ -125,13 +157,12 @@ $ani-delay: .85s;
       color: var(--link-color);
     }
 
-    @media (max-width: 768px) {
+    @include respond-down('xl') {
       font-size: 40px;
     }
 
-    @media (max-width: 576px) {
+    @include respond-down('lg-m') {
       font-size: 30px;
-      margin-bottom: 36px;
     }
   }
 
@@ -139,21 +170,20 @@ $ani-delay: .85s;
     font-size: 24px;
     color: #DEDEDE;
     line-height: 2;
-    margin-bottom: 100px;
 
-    @media (max-width: 1200px) {
-      width: 768px;
-      margin: 0 auto 100px auto;
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
-      font-size: 20px;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 576px) {
+    @include respond-down('xl') {
       font-size: 18px;
+    }
+
+    @include respond-down('lg-m') {
+      font-size: 16px;
+    }
+  }
+
+  .book_btn {
+    @include respond-down('xl') {
+      height: 60px;
+      font-size: 20px;
     }
   }
 }
@@ -168,16 +198,17 @@ $ani-delay: .85s;
   opacity: 0;
   transform: translate3d(100px, -50%, 0);
   animation: RightCenterIn $ani-delay $ani-func .5s forwards;
+  $diaplay-wdith: 348px;
 
-  @media (max-width: 1160px) {
+  @include respond-down('md') {
     display: none;
   }
 
   .display1,
   .display2 {
     padding: 24px;
-    height: 662px;
-    width: 348px;
+    display: inline-block;
+    height: $content-height;
     background: #fff;
     border-radius: 40px;
     box-shadow: 0px 24px 20px 4px #00000026;
@@ -185,22 +216,38 @@ $ani-delay: .85s;
     position: relative;
     z-index: 1;
 
+    @include respond-down('xl') {
+      height: $content-height * 0.9;
+    }
+
+    @include respond-down('lg-m') {
+      height: $content-height * 0.8;
+    }
+
     img {
-      width: 100%;
       height: 100%;
       object-fit: contain;
       user-select: none;
     }
   }
 
+  $display2Height: 463px;
+
   .display2 {
-    height: 463px;
-    width: 862px;
+    height: $display2Height;
     border-radius: 0;
     position: absolute;
     right: -6px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 0;
+
+    @include respond-down('xl') {
+      height: $display2Height * .9;
+    }
+
+    @include respond-down('lg-m') {
+      height: $display2Height * .8;
+    }
   }
 }

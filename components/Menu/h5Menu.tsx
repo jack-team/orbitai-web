@@ -1,6 +1,7 @@
 import { type FC, Fragment } from 'react';
 import classNames from 'classnames';
 import { useSafeState, useMemoizedFn } from 'ahooks';
+import { ModeType } from '@/components/BaseLayout/types';
 import Icon, { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 import { type MenuItemType } from '.';
 import MenuItem from './menuItem';
@@ -8,11 +9,12 @@ import Logo from '@/assets/logo.svg';
 import styles from './styles.module.scss';
 
 type H5MenuProps = {
+  mode?: ModeType;
   menus?: MenuItemType[];
 }
 
 const H5Menu: FC<H5MenuProps> = (props) => {
-  const { menus } = props;
+  const { menus, mode = 'transparent' } = props;
   const [menuOpen, setMenuOpen] = useSafeState(false);
 
   const openMenu = useMemoizedFn(() => {
@@ -34,7 +36,10 @@ const H5Menu: FC<H5MenuProps> = (props) => {
         <div
           onClick={openMenu}
           children={<MenuOutlined />}
-          className={styles.h5_menu_switch}
+          className={classNames(
+            styles.h5_menu_switch,
+            styles[mode]
+          )}
         />
       )}
       <div className={className}>

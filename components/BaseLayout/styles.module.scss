@@ -1,106 +1,109 @@
- @media (max-width: 686px) {
-   :root {
-     --header-height: 68px !important;
-   }
- }
+@import '@/styles/responsive.scss';
 
+@include respond-down('lg') {
+  :root {
+    --header-height: 68px !important;
+  }
+}
 
- .base_layout {
-   display: block;
-   height: 100vh;
- }
+.base_layout {
+  display: block;
+  height: 100vh;
+}
 
- .layout_content {
-   height: 100%;
-   overflow: hidden;
+.layout_content {
+  height: 100%;
+  overflow: hidden;
 
-   .scroller {
-     &>div:first-child {
-       overflow: hidden auto !important;
-     }
-   }
- }
+  .scroller {
+    &>div:first-child {
+      overflow: hidden auto !important;
+    }
+  }
+}
 
- .base_header {
-   position: fixed;
-   left: 0;
-   right: 0;
-   top: 0;
-   z-index: 99;
-   height: var(--header-height);
-   transition: all .5s var(--ani-func);
+.base_header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  height: var(--header-height);
+  transition: all .5s var(--ani-func);
 
-   &.transparent {
-     background: rgb(255, 255, 255, 0);
-   }
+  &.transparent {
+    background: rgb(255, 255, 255, 0);
+  }
 
-   &.white {
-     background: rgb(255, 255, 255, 1);
-     box-shadow: 2px 2px 5px rgb(0, 0, 0, .1);
+  &.white {
+    background: rgb(255, 255, 255, 1);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0, .1);
 
-     .band {
+    .band {
 
-       .logo,
-       .app_name {
-         color: var(--theme-color);
-       }
-     }
-   }
- }
+      .logo,
+      .app_name {
+        color: var(--theme-color);
+      }
+    }
+  }
+}
 
- .base_header_content {
-   height: 100%;
-   width: var(--content-width);
-   margin: auto;
-   display: flex;
-   align-items: center;
-   padding: 0 16px;
+.base_header_content {
+  height: 100%;
+  width: var(--content-width);
+  margin: auto;
+  display: flex;
+  align-items: center;
 
-   @media (max-width: 1200px) {
-     width: 100%;
-   }
+  @include respond-down('xl') {
+    width: 100%;
+    padding: 0 36px;
+  }
 
-   .band {
-     height: 100%;
-     display: flex;
-     align-items: center;
-     text-decoration: none;
-     gap: 4px;
+  @include respond-down('sm') {
+    padding: 0 16px;
+  }
 
-     .logo {
-       color: #fff;
-       font-size: 44px;
+  .band {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 4px;
 
-       @media (max-width: 636px) {
-         font-size: 40px;
-       }
-     }
+    .logo {
+      color: #fff;
+      font-size: 44px;
+    }
 
-     .app_name {
-       font-weight: 600;
-       color: #fff;
-       font-size: 32px;
-     }
+    .app_name {
+      font-weight: 600;
+      color: #fff;
+      font-size: 32px;
+      margin-left: 4px;
 
-     @media (max-width: 860px) {
-       .app_name {
-         display: none;
-       }
-     }
+      @include respond-down('md') {
+        display: none;
+      }
+    }
 
-     @media (max-width: 686px) {
-       .app_name {
-         font-size: 20px;
-         display: block;
-       }
-     }
-   }
- }
+    @include respond-down('lg') {
+      .logo {
+        font-size: 36px;
+      }
 
- .scroll_content.safe_area {
-   &::before {
-     content: "";
-     display: block;
-     height: var(--header-height);
-   }
- }
+      .app_name {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.scroll_content.safe_area {
+  &::before {
+    content: "";
+    display: block;
+    height: var(--header-height);
+  }
+}

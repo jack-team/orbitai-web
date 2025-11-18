@@ -83,7 +83,7 @@ const Menu: FC<MenuProps> = (props) => {
           );
         })}
       </div>
-      <H5Menu menus={menus} />
+      <H5Menu menus={menus} mode={mode} />
     </div>
   );
 }
