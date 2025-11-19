@@ -196,6 +196,7 @@ $content-height: 662px;
   .display2 {
     padding: 24px;
     display: inline-block;
+    width: $content-height * .5;
     height: $content-height;
     background: #fff;
     border-radius: 40px;
@@ -205,11 +206,17 @@ $content-height: 662px;
     z-index: 1;
 
     @include respond-down('xl') {
-      height: $content-height * 0.9;
+      $xl-height: $content-height * .9;
+
+      width: $xl-height * .5;
+      height: $xl-height;
     }
 
     @include respond-down('lg-m') {
-      height: $content-height * 0.8;
+      $lg-m-height: $content-height * .8;
+
+      width: $lg-m-height * 0.5;
+      height: $lg-m-height;
     }
 
     img {
@@ -220,8 +227,10 @@ $content-height: 662px;
   }
 
   $display2Height: 463px;
+  $display2Width: $display2Height * 1.6;
 
   .display2 {
+    width: $display2Width;
     height: $display2Height;
     border-radius: 0;
     position: absolute;
@@ -231,10 +240,12 @@ $content-height: 662px;
     z-index: 0;
 
     @include respond-down('xl') {
+      width: $display2Width * .9;
       height: $display2Height * .9;
     }
 
     @include respond-down('lg-m') {
+      width: $display2Width * .8;
       height: $display2Height * .8;
     }
   }

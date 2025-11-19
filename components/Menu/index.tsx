@@ -40,6 +40,7 @@ const Menu: FC<MenuProps> = (props) => {
       const labelNode = path ?
         <Link
           href={path}
+          prefetch={false}
           className={styles.label}
         >
           {label}{arrowNode}
