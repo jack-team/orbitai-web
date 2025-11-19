@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import classNames from 'classnames';
 import CenterContent from '@/components/CenterContent';
 import Card, { type CardData } from './card';
 import styles from './styles.module.scss';
@@ -20,11 +21,11 @@ const items: CardData[] = [
 
 const Block4: FC = () => {
   return (
-    <div className={styles.container}>
+    <div className={classNames('block-container', styles.container)}>
       <CenterContent>
-        <div className={styles.title}>
+        <h1 className={classNames('title', styles.title)}>
           Proven in Real-World Operations
-        </div>
+        </h1>
         <div className={styles.items}>
           {items.map((item, i) => {
             return (

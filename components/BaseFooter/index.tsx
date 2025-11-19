@@ -35,7 +35,7 @@ const menus = [
 const BaseFooter: FC = () => {
   return (
     <footer className={styles.footer}>
-      <CenterContent className={styles.footer_content}>
+      <CenterContent>
         <div className={styles.content_top}>
           <div className={styles.footer_content_left}>
             <Link href="/" className={styles.band}>

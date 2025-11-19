@@ -10,14 +10,14 @@ const Banner: FC = () => {
       <div className={styles.banner_container}>
         <CenterContent className={styles.banner_content}>
           <div className={styles.content_inner}>
-            <div className={styles.title}>
-              <p>Transforming Global</p>
-              <p>Operations Through</p>
-              <p className={styles.l_text}>Intelligent Automation</p>
+            <div className={styles.title_container}>
+              <h1 className="title">Transforming Global</h1>
+              <h1 className="title">Operations Through</h1>
+              <h1 className={classNames('title', styles.l_text)}>Intelligent Automation</h1>
             </div>
-            <div className={styles.sub_title}>
+            <h2 className={classNames('title', styles.sub_title)}>
               Simplify your workflows and automate your tasks with our cutting-edge Al solutions tailored for supply chain and logistics
-            </div>
+            </h2>
             <Button className={styles.book_btn}>Book a Demo</Button>
           </div>
         </CenterContent>

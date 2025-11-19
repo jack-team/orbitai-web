@@ -31,36 +31,15 @@
 .content {
   position: relative;
   z-index: 1;
-}
 
-.title {
-  font-size: 48px;
-  font-weight: 600;
-  color: #fff;
-  line-height: 1;
-  text-align: center;
-  margin-bottom: 40px;
-
-  @include respond-down('lg') {
-    font-size: 36px;
+  .title {
+    color: #fff;
+    text-align: center;
   }
 
-  @include respond-down('sm') {
-    font-size: 24px;
-  }
-}
-
-.desc {
-  line-height: 2;
-  font-size: 24px;
-  text-align: center;
-  color: var(--link-color);
-
-  @include respond-down('lg') {
-    font-size: 20px;
-  }
-
-  @include respond-down('sm') {
-    font-size: 16px;
+  .sub_title {
+    line-height: 2;
+    text-align: center;
+    color: var(--link-color);
   }
 }

@@ -145,45 +145,18 @@ $content-height: 662px;
     }
   }
 
-  .title {
-    font-size: 50px;
+  .title_container {
     color: #fff;
-    font-weight: 700;
-
-    p {
-      margin: 0;
-      line-height: 1.5;
-    }
 
     .l_text {
       color: var(--link-color);
-    }
-
-    @include respond-down('xl') {
-      font-size: 40px;
-    }
-
-    @include respond-down('lg-m') {
-      font-size: 30px;
-    }
-
-    @include respond-down('sm') {
-      font-size: 28px;
+      margin-bottom: 0;
     }
   }
 
   .sub_title {
-    font-size: 24px;
     color: #DEDEDE;
-    line-height: 2;
-
-    @include respond-down('xl') {
-      font-size: 18px;
-    }
-
-    @include respond-down('lg-m') {
-      font-size: 16px;
-    }
+    margin-bottom: 0;
   }
 
   .book_btn {

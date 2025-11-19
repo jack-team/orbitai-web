@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import classNames from 'classnames';
 import CenterContent from '@/components/CenterContent';
 import Card, { type CardData } from './card';
 import styles from './styles.module.scss';
@@ -32,14 +33,14 @@ const items: CardData[] = [
 
 const Block3: FC = () => {
   return (
-    <div className={styles.container}>
+    <div className={classNames('block-container', styles.container)}>
       <CenterContent>
-        <div className={styles.title}>
+        <h1 className={classNames('title', styles.title)}>
           Built for Your Company's Unique Challenges
-        </div>
-        <div className={styles.desc}>
+        </h1>
+        <h2 className={classNames('title', styles.sub_title)}>
           Each customer type faces distinct operational bottlenecks. Our AI helpers are specifically designed to address you's pain points with measurable results.
-        </div>
+        </h2>
         <div className={styles.items}>
           {items.map((item, i) => {
             return (

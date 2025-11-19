@@ -3,6 +3,7 @@ import type { PropsWithChildren, FC } from 'react';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { Inter } from "next/font/google";
 import '@/styles/global.scss';
+import '@/styles/custom.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 

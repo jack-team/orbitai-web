@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import classNames from 'classnames';
 import Tabs from '@/components/Tabs';
 import CenterContent from '@/components/CenterContent';
 import styles from './styles.module.scss';
@@ -6,11 +7,11 @@ import Step1 from './step1';
 
 const Block1: FC = () => {
   return (
-    <div className={styles.container}>
+    <div className={classNames('block-container', styles.container)}>
       <CenterContent className={styles.content}>
-        <div className={styles.title}>
+        <h1 className={classNames('title', styles.title)}>
           Our Product Ecosystem
-        </div>
+        </h1>
         <Tabs
           items={[
             {
