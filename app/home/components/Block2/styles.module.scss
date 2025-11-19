@@ -1,7 +1,6 @@
 @import '@/styles/responsive.scss';
 
 .container {
-  padding: 100px 0 140px 0;
   position: relative;
 
   &::after {
@@ -13,10 +12,6 @@
     background: #fff;
     position: absolute;
     z-index: 0;
-  }
-
-  @include respond-down('md') {
-    padding: 60px 0;
   }
 
   @include respond-down('sm') {

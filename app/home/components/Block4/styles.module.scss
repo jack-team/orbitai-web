@@ -2,20 +2,12 @@
 
 .container {
   background: #fff;
-  padding: 140px 0 160px 0;
 
   .title {
     color: var(--theme-color);
     text-align: center;
   }
 
-  @include respond-down('md') {
-    padding: 60px 0;
-  }
-
-  @include respond-down('sm') {
-    padding: 48px 0;
-  }
 }
 
 .items {

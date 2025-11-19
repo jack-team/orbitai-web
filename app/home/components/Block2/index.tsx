@@ -7,7 +7,7 @@ import Cards from './cards';
 
 const Block2: FC = () => {
   return (
-    <div className={styles.container}>
+    <div className={classNames('block-container', styles.container)}>
       <CenterContent className={styles.content}>
         <h1 className={classNames('title', styles.title)}>
           The Power of our Technology
