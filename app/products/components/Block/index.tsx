@@ -1,5 +1,6 @@
 import { type FC, type CSSProperties, useMemo } from 'react';
-import { Row, Col } from 'antd';
+import classNames from 'classnames';
+import CenterContent from '@/components/CenterContent';
 import Card, { type CardData } from './card';
 import styles from './styles.module.scss';
 
@@ -23,27 +24,27 @@ const Block: FC<BlockProps> = (props) => {
   }, [bgColor]);
 
   return (
-    <div className={styles.container} style={style}>
-      <div className={styles.content}>
-        <div className={styles.title}>
+    <div className="block-container" style={style}>
+      <CenterContent className={styles.content}>
+        <h1 className={classNames('title', styles.title)}>
           {props.title}
-        </div>
+        </h1>
         <div className={styles.sub_title}>
           {props.subTitle}
         </div>
-        <div className={styles.desc}>
+        <h2 className={classNames('title', styles.desc)}>
           {props.desc}
-        </div>
-        <Row gutter={[60, 60]}>
+        </h2>
+        <div className={styles.items}>
           {cards.map((item, i) => {
             return (
-              <Col key={i} span={8}>
+              <div key={i} className={styles.item}>
                 <Card data={item} />
-              </Col>
+              </div>
             );
           })}
-        </Row>
-      </div>
+        </div>
+      </CenterContent>
     </div>
   );
 }

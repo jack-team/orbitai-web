@@ -54,6 +54,7 @@ h2.title {
   @include respond-down('xl') {
     font-size: 18px;
     margin-bottom: 60px;
+    line-height: 1.5;
   }
 
   @include respond-down('lg-m') {

@@ -1,15 +1,39 @@
+@import '@/styles/responsive.scss';
+
 .container {
   height: 100%;
   border-radius: 24px;
-  padding: 40px 60px;
+  padding: 42px;
   background: #fff;
   box-shadow: 0px 8px 20px 4px #0000000F;
+
+  @include respond-down('xl') {
+    padding: 36px;
+  }
+
+  @include respond-down('lg') {
+    padding: 32px;
+  }
+
+  @include respond-down('lg-m') {
+    padding: 24px;
+  }
+
+  @include respond-down('md') {
+    padding: 18px 16px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
 
   .icon {
     width: 80px;
     height: 80px;
     display: block;
     margin-bottom: 12px;
+
+    @include respond-down('md') {
+      margin: 0 auto 12px auto;
+    }
   }
 
   .title {
@@ -18,11 +42,21 @@
     line-height: 1;
     color: var(--theme-color);
     margin-bottom: 20px;
+
+    @include respond-down('md') {
+      text-align: center;
+      font-size: 16px;
+    }
   }
 
   .desc {
     font-size: 16px;
     line-height: 22px;
     color: #4B4B4B;
+
+    @include respond-down('md') {
+      text-align: center;
+      font-size: 14px;
+    }
   }
 }

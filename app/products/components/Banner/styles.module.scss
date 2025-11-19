@@ -1,33 +1,67 @@
-.banner_container {
-  padding: 120px 0;
+@import '@/styles/responsive.scss';
+
+.container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - var(--header-height));
 }
 
 .banner_content {
   text-align: center;
+
+  .title {
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .sub_title {
+    font-size: 30px;
+    line-height: 2;
+    color: var(--link-color);
+    margin-bottom: 24px;
+
+    @include respond-down('xl') {
+      font-size: 18px;
+    }
+
+    @include respond-down('lg-m') {
+      font-size: 16px;
+    }
+  }
+
+  .desc {
+    color: #DEDEDE;
+  }
 }
 
-.title {
-  font-size: 52px;
-  color: #fff;
-  font-weight: 600;
-  line-height: 80px;
-  margin-bottom: 12px;
-}
+.btns {
+  gap: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.sub_title {
-  font-size: 30px;
-  line-height: 2;
-  color: var(--link-color);
-  margin-bottom: 24px;
-}
+  @include respond-down('md') {
+    gap: 36px;
+  }
 
-.desc {
-  color: #DEDEDE;
-  line-height: 2;
-  font-size: 24px;
-  padding: 0 40px;
-}
+  @include respond-down('sm') {
+    gap: 20px;
+  }
 
-.footer {
-  margin-top: 60px;
+  .btn {
+    @include respond-down('xl') {
+      height: 56px;
+      font-size: 18px;
+    }
+
+    @include respond-down('sm') {
+      flex: 1;
+      gap: 20px;
+      height: 48px;
+      font-size: 16px;
+      padding: 0 16px;
+    }
+  }
 }

@@ -1,19 +1,8 @@
-.container {
-  padding: 140px 0 120px 0;
-}
-
-.content {
-  margin: auto;
-  width: var(--content-width);
-}
+@import '@/styles/responsive.scss';
 
 .title {
-  font-size: 48px;
-  font-weight: 600;
-  color: var(--theme-color);
-  line-height: 1;
   text-align: center;
-  margin-bottom: 80px;
+  color: var(--theme-color);
 }
 
 .sub_title {
@@ -22,17 +11,37 @@
   line-height: 2;
   text-align: center;
   margin-bottom: 8px;
+
+  @include respond-down('xl') {
+    line-height: 1;
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  @include respond-down('sm') {
+    font-size: 16px;
+  }
 }
 
 .desc {
-  font-size: 24px;
   color: #4B4B4B;
-  line-height: 2;
   text-align: center;
-  margin-bottom: 80px;
 }
 
-.cards {
+.items {
   display: flex;
-  gap: 80px;
+  gap: 60px;
+
+  @include respond-down('lg') {
+    gap: 20px;
+  }
+
+  @include respond-down('md') {
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  .item {
+    flex: 1;
+  }
 }

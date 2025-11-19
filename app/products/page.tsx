@@ -3,8 +3,6 @@ import BaseLayout from '@/components/BaseLayout';
 import Banner from './components/Banner';
 import Block from './components/Block';
 
-
-
 const Home: FC = () => {
   return (
     <BaseLayout defaultMode="white">
