@@ -224,7 +224,7 @@
     }
 
     @include respond-down('sm') {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 
@@ -235,7 +235,7 @@
     justify-content: space-between;
 
     @include respond-down('xl') {
-      width: auto;
+      width: 100%;
       flex: 1;
     }
 
@@ -259,7 +259,7 @@
       }
 
       @include respond-down('sm') {
-        font-size: 12px;
+        font-size: 10px;
       }
     }
   }
