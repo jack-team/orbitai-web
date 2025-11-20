@@ -227,10 +227,9 @@ $content-height: 662px;
   }
 
   $display2Height: 463px;
-  $display2Width: $display2Height * 1.6;
 
   .display2 {
-    width: $display2Width;
+    width: 100%;
     height: $display2Height;
     border-radius: 0;
     position: absolute;
@@ -238,14 +237,14 @@ $content-height: 662px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 0;
+    display: flex;
+    justify-content: flex-end;
 
     @include respond-down('xl') {
-      width: $display2Width * .9;
       height: $display2Height * .9;
     }
 
     @include respond-down('lg-m') {
-      width: $display2Width * .8;
       height: $display2Height * .8;
     }
   }
