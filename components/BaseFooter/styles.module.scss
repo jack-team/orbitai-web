@@ -5,8 +5,16 @@
   background: var(--theme-color);
   padding: 100px 0;
 
-  @include respond-down('sm') {
+  @include respond-down('lg') {
+    padding: 64px 0;
+  }
+
+  @include respond-down('md') {
     padding: 48px 0;
+  }
+
+  @include respond-down('sm') {
+    padding: 24px 0;
   }
 }
 

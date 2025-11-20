@@ -24,19 +24,19 @@ const menuItems: MenuItemType[] = [
     path: '/products',
     children: [
       {
-        key: 'a',
-        label: 'Product A xxx aaasss',
-        path: '/a'
+        key: 'fulfillQ',
+        label: 'FulfillQ',
+        path: '/fulfillQ'
       },
       {
-        key: 'b',
-        label: 'Product B',
-        path: '/a'
+        key: 'vendorPilot',
+        label: 'VendorPilot',
+        path: '/vendorPilot'
       },
       {
         key: 'c',
-        label: 'Product C',
-        path: '/a'
+        label: 'SmartClear Al',
+        path: '/smartClear-al'
       }
     ]
   },

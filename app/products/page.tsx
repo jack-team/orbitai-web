@@ -1,7 +1,13 @@
 import type { FC } from 'react'
+import type { Metadata } from "next";
 import BaseLayout from '@/components/BaseLayout';
 import Banner from './components/Banner';
 import Block from './components/Block';
+
+export const metadata: Metadata = {
+  title: "Products",
+  description: "Products",
+};
 
 const Home: FC = () => {
   return (
